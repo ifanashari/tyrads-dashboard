@@ -1,0 +1,31 @@
+.controlItem_item,
+.controlItem_pageItem {
+    width: 100%;
+    height: 45px;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+}
+
+.controlItem_item svg {
+    width: 15px;
+    height: 15px;
+    display: block;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+
+.controlItem_pageItem:hover {
+    background: #535ce7;
+}
+
+.controlItem_pageItem:hover svg {
+    width: 20px;
+    height: 20px;
+}
+
+.controlItem_pageItem:hover svg path {
+    stroke: #ffffff;
+}
