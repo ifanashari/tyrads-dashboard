@@ -1,0 +1,13 @@
+.cardHighlight {
+    @apply p-5;
+    width: 100%;
+    height: fit-content;
+    min-height: 100px;
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #e6e6e6;
+}
+
+.cardHighlight_title {
+    @apply text-xl font-medium;
+}

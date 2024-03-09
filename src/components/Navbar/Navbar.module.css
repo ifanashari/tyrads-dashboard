@@ -1,4 +1,5 @@
 .navbar {
+    @apply py-8;
     width: 100px;
     height: 100vh;
     background: #ffffff;

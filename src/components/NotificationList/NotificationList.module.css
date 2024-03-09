@@ -1,0 +1,38 @@
+.notificationItem {
+    @apply border-borderStroke;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    /* border: none */
+    border-width: 0 0 1px 0;
+    border-style: solid;
+}
+
+.notificationItem_title {
+    @apply font-bold text-xl;
+}
+
+.notificationItem_media {
+    @apply bg-primary;
+    width: 70px;
+    height: 70px;
+    position: relative;
+    border-radius: 100px;
+}
+
+.notificationItem_media svg {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+
+.notificationItem_media svg path {
+    stroke: #ffffff;
+}
+
+.notificationItem_date {
+    @apply ml-auto italic;
+}

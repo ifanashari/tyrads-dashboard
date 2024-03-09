@@ -8,7 +8,6 @@ export default function Navbar() {
       <div>top</div>
       <NavbarPageControl />
       <div>bottom</div>
-
     </div>
   )
 }

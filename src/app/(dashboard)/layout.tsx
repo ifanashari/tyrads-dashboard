@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/app/globals.css";
 import Navbar from "@/components/Navbar/Navbar";
+import styles from "./layout-admin.module.css";
+import Highlight from "@/components/Highlight/Highlight";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +21,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        {children}
+        <div className={styles.adminContent}>{children}</div>
+        <Highlight />
       </body>
     </html>
   );
