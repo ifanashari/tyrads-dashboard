@@ -1,0 +1,16 @@
+.home_wrapper {
+  @apply bg-mainBackground;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.home {
+  @apply bg-mainBackground text-center;
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}

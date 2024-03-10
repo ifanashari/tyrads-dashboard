@@ -1,0 +1,8 @@
+.premium_icon svg {
+    width: 120px;
+    height: 120px;
+}
+
+.premium_icon svg path{
+    @apply stroke-primary;
+}

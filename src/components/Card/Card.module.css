@@ -1,19 +1,22 @@
 .card {
-    @apply p-5;
-    width: 100%;
-    background: #ffffff;
-    border-radius: 20px;
+  @apply p-5;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 1px 1px rgba(3, 7, 18, 0.01), 0px 5px 4px rgba(3, 7, 18, 0.01),
+    0px 12px 9px rgba(3, 7, 18, 0.02), 0px 20px 15px rgba(3, 7, 18, 0.02),
+    0px 32px 24px rgba(3, 7, 18, 0.03);
 }
 
 .card_title {
-    @apply text-lg font-medium;
+  @apply text-lg font-medium;
 }
 
 .card_default {
-    height: 100%;
-    min-height: 100px;
+  height: 100%;
+  min-height: 100px;
 }
 
 .card_fitContent {
-    height: fit-content;
+  height: fit-content;
 }

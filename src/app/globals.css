@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 body {
-    @apply bg-mainBackground;
+  @apply bg-mainBackground;
 }
 
 /* typography */
 
 h1 {
-    @apply text-4xl mb-2;
+  @apply text-4xl mb-2;
 }
 
 h2 {
-    @apply text-3xl mb-2;
+  @apply text-3xl mb-2;
 }
 
 h3 {
-    @apply text-2xl mb-2;
+  @apply text-2xl mb-2;
 }
 
 /* typography */
@@ -25,7 +25,7 @@ h3 {
 /* layout */
 
 .grid {
-    @apply gap-8;
+  @apply gap-8;
 }
 
 /* layout */
