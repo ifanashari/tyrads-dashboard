@@ -9,5 +9,5 @@
 }
 
 .cardHighlight_title {
-  @apply text-xl font-medium;
+  @apply text-xl font-bold;
 }

@@ -5,12 +5,8 @@ import Card from "../Card/Card";
 import IconBell from "../Icons/IconBell";
 import classNames from "classnames";
 import { formatDate } from "@/utils/textUtils";
+import StatusBadge, { NotificationStatus } from "../StatusBadge/StatusBadge";
 
-enum NotificationStatus {
-  "SUCCESS",
-  "PENDING",
-  "FAILED",
-}
 enum NotificationType {
   "INVOICE",
   "OTHER",
@@ -46,10 +42,10 @@ export default function NotificationList({
       type: NotificationType.OTHER,
     },
     {
-      status: NotificationStatus.SUCCESS,
-      message: "Message from Eric",
+      status: NotificationStatus.PENDING,
+      message: "Invoice",
       dateReceived: new Date().toString(),
-      type: NotificationType.OTHER,
+      type: NotificationType.INVOICE,
     },
     {
       status: NotificationStatus.SUCCESS,
@@ -58,16 +54,12 @@ export default function NotificationList({
       type: NotificationType.OTHER,
     },
     {
-      status: NotificationStatus.SUCCESS,
-      message: "Message from Eric",
+      status: NotificationStatus.FAILED,
+      message: "Invoice",
       dateReceived: new Date().toString(),
-      type: NotificationType.OTHER,
+      type: NotificationType.INVOICE,
     },
   ];
-
-  const StatusBadge = ({ status }: { status: NotificationStatus | null }) => {
-    return <div>{status}</div>;
-  };
 
   const isInvoiceNotification = (value: NotificationType) => {
     return value === NotificationType.INVOICE;
@@ -92,12 +84,12 @@ export default function NotificationList({
                   <IconBell />
                 )}
               </div>
-              <div className="ml-6">
+              <div className="ml-6 flex">
                 <h4 className={styles.notificationItem_title}>
                   {notification.message}
                 </h4>
                 {isInvoiceNotification(notification.type) && (
-                  <StatusBadge status={notification.status} />
+                  <StatusBadge status={notification.status || NotificationStatus.SUCCESS} />
                 )}
               </div>
               <span className={styles.notificationItem_date}>

@@ -1,0 +1,54 @@
+.expenseIncomeCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.expenseIncomeCard_devider {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  z-index: 2;
+}
+.expenseIncomeCard_devider span {
+  background: #ffffff;
+  z-index: 2;
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  inset: 0;
+  margin: auto;
+}
+
+.expenseIncomeCard_devider::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  background: #000000;
+  height: 300%;
+  inset: 0;
+  margin: auto;
+  z-index: 1;
+}
+
+.expenseIncomeCard_barPersentage {
+  @apply bg-secondary;
+  width: 100%;
+  height: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.expenseIncomeCard_barPersentage_progress {
+  @apply bg-primary;
+  height: calc(100% + 10px);
+  top: 0;
+  left: 0;
+  position: absolute;
+  /* border-radius: 10px; */
+  border-right: 5px solid white;
+  /* border-left: none; */
+  margin-top: -5px;
+}

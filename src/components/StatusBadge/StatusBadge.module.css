@@ -1,0 +1,18 @@
+.statusBadge {
+    @apply px-3 py-2 text-xs text-center font-medium;
+    border-radius: 10px;
+    color: white;
+    /* background: red;; */
+}
+
+.SUCCESS {
+    @apply bg-success;
+}
+
+.PENDING {
+    @apply bg-warning;
+}
+
+.FAILED {
+    @apply bg-danger;
+}

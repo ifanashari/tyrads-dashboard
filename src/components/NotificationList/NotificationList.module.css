@@ -9,7 +9,7 @@
 }
 
 .notificationItem_title {
-    @apply font-bold text-xl;
+    @apply font-bold text-xl mr-2;
 }
 
 .notificationItem_media {

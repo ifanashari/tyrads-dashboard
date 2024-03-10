@@ -12,3 +12,7 @@ export const formatUSD = (value: number) => {
 export const formatDate = (value: string) => {
   return moment(new Date(value)).format("LLLL")
 }
+
+export const getPercentage = (value: number, wholeValue: number) => {
+  return Math.round((value / wholeValue) * 100)
+}

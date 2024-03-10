@@ -1,5 +1,4 @@
 import BalanceStatistic from "@/components/BalanceStatistic/BalanceStatistic";
-import Card from "@/components/Card/Card";
 import CreditCardPreview from "@/components/CreditCardPreview/CreditCardPreview";
 import NotificationList from "@/components/NotificationList/NotificationList";
 import TransactionList from "@/components/TransactionList/TransactionList";
@@ -13,8 +12,8 @@ export default function Dashboard() {
         <p>View and control your finances here !</p>
       </div>
       <div className="grid grid-cols-2 mb-8">
-        <CreditCardPreview />
         <NotificationList isTitleActive notificationLimit={2} />
+        <CreditCardPreview />
       </div>
       <div className="grid grid-cols-3 mb-8">
         <div className="col-span-2">

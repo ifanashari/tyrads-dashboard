@@ -1,3 +1,3 @@
 export const DoughnutChartOption = {
-  cutout: 85,
+  cutout: 80,
 };

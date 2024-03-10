@@ -1,0 +1,24 @@
+.buttonProfile {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+.buttonProfile img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    object-fit: cover;
+}
+
+.buttonProfile_dialog {
+    @apply text-center bg-mainBackground py-3 px-5 my-auto;
+    min-width: 100px;
+    width: fit-content;
+    text-wrap: nowrap;
+    height: fit-content;
+    position: absolute;
+    inset: 0;
+    transform: translateX(50px);
+}
