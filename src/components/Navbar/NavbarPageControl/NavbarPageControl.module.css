@@ -1,6 +1,7 @@
 .pageControl_wrapper {
-    width: 45px;
-    min-height: 300px;
+    @apply gap-3;
+    width: 50px;
+    min-height: 100px;
     background: #f7f7fb;
     border-radius: 100px;
     display: flex;

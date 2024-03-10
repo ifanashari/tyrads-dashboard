@@ -1,0 +1,16 @@
+.balanceStatistic_wrapper {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  display: block;
+  position: relative;
+}
+
+.balanceStatistic_ratio {
+  @apply text-4xl;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+}

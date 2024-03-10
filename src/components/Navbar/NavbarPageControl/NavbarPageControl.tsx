@@ -4,8 +4,8 @@ import NavbarControlItem, { PageList } from "../NavbarControlItem/NavbarControlI
 
 const IconHome = lazy(() => import("@/components/Icons/IconHome"))
 const IconBell = lazy(() => import("@/components/Icons/IconBell"))
-const IconClock = lazy(() => import("@/components/Icons/IconClock"))
-const IconPeople = lazy(() => import("@/components/Icons/IconPeople"))
+// const IconClock = lazy(() => import("@/components/Icons/IconClock"))
+// const IconPeople = lazy(() => import("@/components/Icons/IconPeople"))
 const IconWallet = lazy(() => import("@/components/Icons/IconWallet"))
 const IconSetting = lazy(() => import("@/components/Icons/IconSetting"))
 
@@ -13,9 +13,9 @@ export default function NavbarPageControl() {
   const pageList: PageList[] = [
     { icon: <IconHome />, url: "/dashboard" },
     { icon: <IconBell />, url: "/notification" },
-    { icon: <IconClock />, url: "/dashboard" },
-    { icon: <IconPeople />, url: "/dashboard" },
-    { icon: <IconWallet />, url: "/transaction" },
+    // { icon: <IconClock />, url: "/dashboard" },
+    // { icon: <IconPeople />, url: "/dashboard" },
+    { icon: <IconWallet />, url: "/finance" },
     { icon: <IconSetting />, url: "/dashboard" },
 ];
 

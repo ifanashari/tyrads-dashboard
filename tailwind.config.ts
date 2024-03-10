@@ -16,12 +16,16 @@ const config: Config = {
     },
     colors: {
       primary: "#525de4",
-      accent: "#cac7f7",
       secondary: "#f7a71a",
+      accent: "#cac7f7",
 
       mainBackground: "#f7f6fe",
-      borderStroke: "#e6e6e6"
-    }
+      borderStroke: "#e6e6e6",
+
+      success: "#14A44D",
+      warning: "#E4A11B",
+      danger: "#DC4C64",
+    },
   },
   plugins: [],
 };

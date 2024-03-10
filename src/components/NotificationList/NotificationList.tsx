@@ -4,6 +4,7 @@ import IconInvoice from "../Icons/IconInvoice";
 import Card from "../Card/Card";
 import IconBell from "../Icons/IconBell";
 import classNames from "classnames";
+import { formatDate } from "@/utils/textUtils";
 
 enum NotificationStatus {
   "SUCCESS",
@@ -22,18 +23,44 @@ interface NotificationList {
   type: NotificationType;
 }
 
-export default function NotificationList() {
+interface NotificationListProps {
+  isTitleActive?: boolean;
+  notificationLimit?: number;
+}
+
+export default function NotificationList({
+  isTitleActive,
+  notificationLimit
+}: NotificationListProps) {
   const notificationList: NotificationList[] = [
     {
       status: NotificationStatus.SUCCESS,
       message: "Invoice",
-      dateReceived: "asd",
+      dateReceived: new Date().toString(),
       type: NotificationType.INVOICE,
     },
     {
       status: NotificationStatus.SUCCESS,
       message: "Message from Eric",
-      dateReceived: "asd",
+      dateReceived: new Date().toString(),
+      type: NotificationType.OTHER,
+    },
+    {
+      status: NotificationStatus.SUCCESS,
+      message: "Message from Eric",
+      dateReceived: new Date().toString(),
+      type: NotificationType.OTHER,
+    },
+    {
+      status: NotificationStatus.SUCCESS,
+      message: "Message from Eric",
+      dateReceived: new Date().toString(),
+      type: NotificationType.OTHER,
+    },
+    {
+      status: NotificationStatus.SUCCESS,
+      message: "Message from Eric",
+      dateReceived: new Date().toString(),
       type: NotificationType.OTHER,
     },
   ];
@@ -42,19 +69,24 @@ export default function NotificationList() {
     return <div>{status}</div>;
   };
 
+  const isInvoiceNotification = (value: NotificationType) => {
+    return value === NotificationType.INVOICE;
+  };
+
+  const calculateNotificationLimit = notificationLimit ? notificationLimit : notificationList.length
+
   return (
-    <Card>
+    <Card title={isTitleActive ? "Notifications" : undefined}>
       {notificationList.map(
         (notification: NotificationList, notificationIndex) => {
+          if (notificationIndex >= calculateNotificationLimit) return
           return (
             <div
-              className={classNames(
-                styles.notificationItem,
-                "py-5")}
+              className={classNames(styles.notificationItem, "py-5")}
               key={`notification-item-${notificationIndex}`}
             >
               <div className={styles.notificationItem_media}>
-                {notification.type === NotificationType.INVOICE ? (
+                {isInvoiceNotification(notification.type) ? (
                   <IconInvoice />
                 ) : (
                   <IconBell />
@@ -64,10 +96,12 @@ export default function NotificationList() {
                 <h4 className={styles.notificationItem_title}>
                   {notification.message}
                 </h4>
-                <StatusBadge status={notification.status} />
+                {isInvoiceNotification(notification.type) && (
+                  <StatusBadge status={notification.status} />
+                )}
               </div>
               <span className={styles.notificationItem_date}>
-                {notification.dateReceived}
+                {formatDate(notification.dateReceived)}
               </span>
             </div>
           );
