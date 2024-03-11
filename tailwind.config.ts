@@ -25,6 +25,7 @@ const config: Config = {
       success: "#14A44D",
       warning: "#E4A11B",
       danger: "#DC4C64",
+      white: "#ffffff"
     },
   },
   plugins: [],

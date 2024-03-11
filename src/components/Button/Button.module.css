@@ -1,0 +1,23 @@
+.button {
+    @apply cursor-pointer border-none inline-block rounded px-6 pb-2 pt-2.5 text-sm font-medium leading-normal transition duration-150 ease-in-out motion-reduce:transition-none
+}
+
+.PRIMARY{
+    @apply bg-primary text-white;
+}
+
+.SECONDARY{
+    @apply bg-secondary text-white;
+}
+
+.SUCCESS{
+    @apply bg-success text-white;
+}
+
+.WARNING{
+    @apply bg-warning text-white;
+}
+
+.DANGER{
+    @apply bg-danger text-white;
+}

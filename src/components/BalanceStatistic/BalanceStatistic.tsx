@@ -15,6 +15,7 @@ import {
   ArcElement,
 } from "chart.js";
 import { DoughnutChartOption } from "@/constant/ChartConstant";
+import { getPercentage } from "@/utils/textUtils";
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -38,7 +39,10 @@ export default function BalanceStatistic() {
 
   const dataBalanceList = dataBalance.datasets[0].data;
 
-  const balanceRation = (dataBalanceList[0] / dataBalanceList[1]) * 100;
+  const balanceRation = getPercentage(
+    dataBalanceList[0],
+    dataBalanceList[1] + dataBalanceList[0]
+  );
 
   return (
     <Card title="Income and Expense ratio" isFitContent>

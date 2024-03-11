@@ -1,5 +1,5 @@
 .adminContent {
-    @apply p-8;
-    width: calc(100% - 100px - 400px);
-    margin-left: 100px;
+  @apply p-8;
+  width: calc(100% - 100px - 400px);
+  margin-left: 100px;
 }

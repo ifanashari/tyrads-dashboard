@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Highlight.module.css";
 import CardHighlight from "../Card/CardHighlight";
 import ExpenseAndInvoice from "../ExpenseAndInvoice/ExpenseAndInvoice";
+import Premium from "../Premium/Premium";
 
 export default function Highlight() {
   return (
@@ -9,10 +10,7 @@ export default function Highlight() {
       <div className="mb-5">
         <ExpenseAndInvoice />
       </div>
-      <div>
-        <CardHighlight title="Got premium" />
-      </div>
-      <CardHighlight title="Latest spending" />
+      <Premium />
     </div>
   );
 }
